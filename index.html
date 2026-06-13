@@ -306,6 +306,7 @@
   .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.8rem}
   .cat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.6rem;transition:border-color .3s ease, box-shadow .3s ease}
   .cat:target{border-color:var(--red);box-shadow:0 0 0 3px rgba(216,67,44,.18)}
+  .cat.flash{border-color:var(--red);box-shadow:0 0 0 3px rgba(216,67,44,.18);transition:box-shadow .3s,border-color .3s}
   .cat .ribbon{margin-bottom:.9rem}
   .cat-note{font-size:.82rem;color:var(--ink-soft);margin-bottom:.7rem}
   .c-row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.5rem 0;border-bottom:1px dashed var(--line)}
@@ -883,6 +884,30 @@
     }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
     items.forEach(function(el){ io.observe(el); });
   }
+
+  // płynne przewijanie do sekcji bez doklejania #kotwicy do adresu
+  (function(){
+    function offset(){ return (nav ? nav.offsetHeight : 70) + 12; }
+    function flash(el){
+      el.classList.add('flash');
+      setTimeout(function(){ el.classList.remove('flash'); }, 1600);
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(ev){
+        var href = a.getAttribute('href');
+        ev.preventDefault();
+        if (href === '#' || href.length < 2) {
+          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+          return;
+        }
+        var target = document.getElementById(href.slice(1));
+        if (!target) return;
+        var y = target.getBoundingClientRect().top + window.pageYOffset - offset();
+        window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+        flash(target);
+      });
+    });
+  })();
 </script>
 </body>
 </html>
