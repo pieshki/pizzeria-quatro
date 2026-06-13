@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#D8432C">
+<meta name="color-scheme" content="only light">
+<title>Pizzeria Quatro Zwoleń — menu i ceny | Pizza Gigant 70 cm, burgery, obiady</title>
+<meta name="description" content="Pizzeria Quatro w Zwoleniu, Plac Jana Kochanowskiego 14 — od 20 lat. 32 pizze w trzech rozmiarach, pizza Gigant 70 cm na 4 sposoby, burgery 100% wołowiny, zestawy obiadowe, coś po chińsku, lody gałkowe. Dowóz gratis od 45 zł na terenie miasta. Tel. 48 676 34 20.">
+<meta property="og:title" content="Pizzeria Quatro — Zwoleń, od 20 lat">
+<meta property="og:description" content="Pełne menu z cenami: pizza w trzech rozmiarach, Gigant 70 cm na 4 sposoby, burgery, obiady i lody gałkowe. Dowóz gratis od 45 zł w mieście. Tel. 48 676 34 20.">
+<meta property="og:type" content="restaurant">
+<meta property="og:url" content="https://pizzeriaquatro.pl/">
+<meta property="og:image" content="https://pizzeriaquatro.pl/img/rodzinna-sosy.jpg">
+<link rel="canonical" href="https://pizzeriaquatro.pl/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23D8432C'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%23FFF9EF' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500;1,6..96,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Pizzeria Quatro",
+  "url": "https://pizzeriaquatro.pl/",
+  "servesCuisine": ["Pizza", "Burgery", "Makarony", "Kuchnia polska", "Kuchnia azjatycka", "Lody"],
+  "telephone": "+48 48 676 34 20",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plac Jana Kochanowskiego 14",
+    "postalCode": "26-700",
+    "addressLocality": "Zwoleń",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "10:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "23:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "23:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "23:00"}
+  ],
+  "sameAs": [
+    "https://www.facebook.com/p/Pizzeria-Quatro-61556299533342/",
+    "https://www.instagram.com/pizzeriaquatro/"
+  ],
+  "priceRange": "$$"
+}
+</script>
+<style>
+  :root{
+    color-scheme: only light;
+    --red:#D8432C;
+    --red-deep:#A93021;
+    --red-bright:#E9573E;
+    --blue:#1B55A5;
+    --blue-deep:#123B75;
+    --yellow:#F7D23E;
+    --green:#46702B;
+    --paper:#FBF2DE;
+    --cream:#F3E4C4;
+    --card:#FFFBF0;
+    --ink:#2A1A10;
+    --ink-soft:#5A4530;
+    --line:#E3CFA4;
+    --display:"Bodoni Moda", Georgia, serif;
+    --body:"Instrument Sans", system-ui, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html, body{overflow-x:hidden}
+  html{background:var(--paper)}
+  #powody, #cennik, #slodka{background:var(--paper)}
+  [id]{scroll-margin-top:80px}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:var(--body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  .wrap{width:min(1180px, 100% - 2.6rem);margin-inline:auto}
+
+  /* ---------- drewno jak na ulotce ---------- */
+  .wood{
+    background-color:#35200F;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(14,7,2,.45) 0 2px, transparent 2px 128px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0 2px, transparent 2px 6px),
+      linear-gradient(90deg,#3F2614 0%,#4B3018 22%,#3A2312 47%,#4E331C 71%,#3B2513 100%);
+  }
+
+  /* ---------- przyciski ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    padding:.95rem 1.55rem;border-radius:12px;
+    font-weight:600;font-size:1rem;text-decoration:none;
+    border:2px solid transparent;cursor:pointer;
+    transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+  .btn-cream{background:var(--paper);color:var(--ink)}
+  .btn-cream:hover{background:#fff}
+  .btn-ghost{border-color:rgba(251,242,222,.6);color:var(--paper)}
+  .btn-ghost:hover{border-color:var(--paper)}
+  .btn-red{background:var(--red);color:#FFF8E7}
+  .btn-red:hover{background:var(--red-bright)}
+
+  .kicker{
+    font-size:.78rem;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--blue);
+  }
+  h2{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(2rem, 4vw, 2.9rem);
+    line-height:1.12;letter-spacing:-.01em;
+    margin:.55rem 0 1rem;
+  }
+  .sec{padding-block:clamp(3.4rem, 8vw, 6.5rem)}
+
+  /* ---------- wstążki kategorii jak na ulotce ---------- */
+  .ribbon{
+    display:inline-block;
+    background:var(--red);color:#FFF8E7;
+    font-family:var(--body);font-weight:700;font-size:1.02rem;
+    letter-spacing:.09em;text-transform:uppercase;
+    padding:.5rem 1.6rem .5rem 1rem;
+    clip-path:polygon(0 0, 100% 0, calc(100% - 14px) 50%, 100% 100%, 0 100%);
+  }
+  .ribbon-y{background:var(--yellow);color:var(--ink)}
+
+  /* ---------- nawigacja ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,242,222,.93);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .nav.scrolled{border-color:var(--line);box-shadow:0 6px 24px rgba(42,26,16,.08)}
+  .nav-in{display:flex;align-items:center;gap:1.4rem;padding:.8rem 0}
+  .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+  .qmark{
+    width:42px;height:42px;border-radius:10px;background:var(--red);
+    display:grid;place-items:center;flex:none;
+    font-family:var(--display);font-weight:700;font-size:1.55rem;color:#FFF8E7;
+    padding-bottom:.18rem;
+  }
+  .brand b{
+    font-family:var(--display);font-weight:600;font-size:1.18rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--blue);
+  }
+  .nav-links{display:flex;gap:1.4rem;margin-left:auto;list-style:none}
+  .nav-links a{
+    text-decoration:none;font-weight:500;font-size:.95rem;color:var(--ink);
+    border-bottom:2px solid transparent;padding-bottom:2px;
+    transition:border-color .15s ease;
+  }
+  .nav-links a:hover{border-color:var(--red)}
+  .nav-tel{margin-left:auto}
+  .nav-links + .nav-tel{margin-left:0}
+  .nav .btn{padding:.6rem 1.1rem;font-size:.92rem}
+  .t-txt{display:none}
+
+  /* ---------- hero na drewnie ---------- */
+  .hero{padding-top:clamp(1.6rem, 4.5vw, 3.8rem);padding-bottom:clamp(2.8rem, 7vw, 5.6rem)}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center}
+  .hero-panel{
+    position:relative;z-index:1;overflow:hidden;
+    background:var(--red);color:#FFF8E7;
+    border-radius:24px;
+    box-shadow:0 26px 60px -20px rgba(0,0,0,.55);
+    padding:clamp(1.7rem, 4.5vw, 3.8rem);
+    padding-right:clamp(1.7rem, 4.5vw, 7rem);
+  }
+  .ghost-q{
+    position:absolute;right:-2.5rem;bottom:-10rem;z-index:0;
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(17rem, 26vw, 24rem);line-height:1;
+    color:rgba(255,248,231,.09);
+    pointer-events:none;user-select:none;
+  }
+  .hero-panel > *{position:relative;z-index:1}
+  .hero-panel .kicker{color:rgba(255,248,231,.88)}
+  .hero h1{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(2.5rem, 5.3vw, 4.1rem);
+    line-height:1.06;letter-spacing:-.012em;
+    margin:.9rem 0 1.1rem;
+  }
+  .hero h1 em{font-style:italic;font-weight:600}
+  .hero-lead{
+    font-size:clamp(1.02rem, 1.4vw, 1.13rem);
+    color:rgba(255,248,231,.95);max-width:34rem;margin-bottom:1.8rem;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.7rem}
+  .hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem}
+  .promo{
+    background:var(--yellow);color:var(--ink);
+    font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+    padding:.55rem 1rem;border-radius:9px;
+    box-shadow:0 6px 16px rgba(0,0,0,.25);
+  }
+  .hero-plain{
+    font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(255,248,231,.88);
+  }
+  .hero-photo{
+    position:relative;z-index:2;margin-left:-4.5rem;
+    border-radius:20px;
+  }
+  .hero-photo img{
+    width:100%;height:auto;object-fit:cover;
+    border-radius:20px;border:7px solid var(--paper);
+    box-shadow:0 30px 60px -18px rgba(0,0,0,.6);
+  }
+  .badge20{
+    position:absolute;top:-20px;right:-14px;z-index:3;
+    width:116px;height:116px;border-radius:50%;
+    background:var(--yellow);border:4px solid #FFF6DC;
+    display:grid;place-content:center;text-align:center;gap:.1rem;
+    transform:rotate(-10deg);
+    box-shadow:0 14px 30px rgba(0,0,0,.4);
+  }
+  .badge20 b{font-family:var(--display);font-weight:700;font-size:2.6rem;line-height:.85;color:var(--blue)}
+  .badge20 span{font-weight:700;font-size:.8rem;letter-spacing:.32em;text-transform:uppercase;color:var(--red);padding-left:.32em}
+
+  /* ---------- cztery powody ---------- */
+  .powody-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.4rem}
+  .powody-head p{max-width:30rem;color:var(--ink-soft)}
+  .powody-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+  .powod{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:1.7rem 1.7rem 1.6rem;
+  }
+  .powod .num{
+    width:36px;height:36px;border-radius:9px;background:var(--red);
+    display:grid;place-items:center;margin-bottom:1rem;
+    font-family:var(--display);font-weight:700;font-size:1.15rem;color:#FFF8E7;
+  }
+  .powod:nth-child(even) .num{background:var(--blue)}
+  .powod h3{font-family:var(--display);font-weight:600;font-size:1.4rem;margin-bottom:.45rem}
+  .powod p{color:var(--ink-soft);font-size:.97rem}
+
+  /* ---------- menu (karty) ---------- */
+  #menu{background:var(--cream)}
+  .menu-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.4rem}
+  .menu-head p{max-width:26rem;color:var(--ink-soft);font-size:.95rem}
+  .menu-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:1.4rem}
+  .dish{
+    display:block;color:inherit;
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;text-decoration:none;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .dish:hover{transform:translateY(-4px);box-shadow:0 18px 40px -16px rgba(42,26,16,.25);border-color:var(--red)}
+  .dish:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+  .dish:hover .dish-img img{transform:scale(1.045)}
+  .dish-body{padding:1.25rem 1.35rem 1.4rem}
+  .dish-body h3{font-family:var(--display);font-weight:600;font-size:1.38rem;margin-bottom:.35rem}
+  .dish-body p{color:var(--ink-soft);font-size:.94rem}
+  .dish-go{
+    display:inline-flex;align-items:center;gap:.35rem;margin-top:.8rem;
+    font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--red);
+  }
+  .dish-go::after{content:"→";transition:transform .2s ease}
+  .dish:hover .dish-go::after{transform:translateX(4px)}
+
+  /* ---------- cennik ---------- */
+  .cennik-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.2rem}
+  .cennik-head p{max-width:30rem;color:var(--ink-soft);font-size:.95rem}
+  .pizza-tytul{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;margin-bottom:1.3rem}
+  .pizza-tytul small{color:var(--ink-soft);font-size:.88rem}
+  .pizza-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 3.2rem}
+  .size-head{
+    display:grid;grid-template-columns:1fr repeat(3, 3.4rem);gap:.7rem;
+    font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);padding-bottom:.45rem;border-bottom:2px solid var(--ink);
+  }
+  .size-head span{text-align:right}
+  .p-row{
+    display:grid;grid-template-columns:1fr repeat(3, 3.4rem);gap:.7rem;
+    align-items:baseline;padding:.6rem 0;border-bottom:1px dashed var(--line);
+  }
+  .p-row b{font-weight:600}
+  .p-row .skl{display:block;font-size:.8rem;color:var(--ink-soft);line-height:1.45}
+  .p-row .c{font-variant-numeric:tabular-nums;text-align:right;font-weight:600;font-size:.92rem;white-space:nowrap}
+  .p-row.star b{color:var(--red)}
+  .p-row.star b::before{content:"★ "}
+  .dodatki-note{
+    font-size:.9rem;margin-top:1.6rem;max-width:100%;
+    background:var(--green);color:#fff;
+    border-radius:14px;padding:1.05rem 1.3rem;
+    box-shadow:0 10px 26px -14px rgba(42,26,16,.4);
+  }
+  .dodatki-note b{color:#fff}
+  .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.8rem}
+  .cat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.6rem;transition:border-color .3s ease, box-shadow .3s ease}
+  .cat:target{border-color:var(--red);box-shadow:0 0 0 3px rgba(216,67,44,.18)}
+  .cat .ribbon{margin-bottom:.9rem}
+  .cat-note{font-size:.82rem;color:var(--ink-soft);margin-bottom:.7rem}
+  .c-row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.5rem 0;border-bottom:1px dashed var(--line)}
+  .c-row:last-child{border-bottom:0}
+  .c-row b{font-weight:600}
+  .c-row .skl{display:block;font-size:.8rem;color:var(--ink-soft);line-height:1.45}
+  .c-row .c{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .cennik-note{font-size:.84rem;color:var(--ink-soft);margin-top:1.8rem}
+
+  /* ---------- pizza gigant na drewnie ---------- */
+  #gigant{color:#FFF6DC}
+  .rod-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(1.6rem, 5vw, 4.5rem);align-items:center}
+  .rod-photo{border-radius:20px;overflow:hidden;border:7px solid var(--paper);box-shadow:0 26px 56px -20px rgba(0,0,0,.6)}
+  .rod-photo img{width:100%;height:100%;object-fit:cover}
+  .rod-copy{
+    background:rgba(18,9,3,.55);
+    border:1px solid rgba(255,246,220,.14);
+    border-radius:20px;
+    padding:clamp(1.5rem, 3.2vw, 2.5rem);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+  }
+  #gigant .kicker{color:var(--yellow)}
+  #gigant p.lead{color:rgba(255,246,220,.95);margin-bottom:1.6rem;max-width:34rem}
+  .rod-chips{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;max-width:30rem;margin-bottom:2rem}
+  .chip{
+    border:1px solid rgba(255,246,220,.4);border-radius:11px;
+    background:rgba(0,0,0,.35);color:#FFF6DC;
+    padding:.75rem .95rem;font-weight:600;font-size:.92rem;
+    letter-spacing:.04em;
+  }
+  .chip::before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;background:var(--yellow);margin-right:.6rem}
+
+  /* ---------- słodka strefa ---------- */
+  .slodka-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:1.4rem;margin-top:2.2rem}
+  .sez{
+    font-family:var(--body);font-weight:700;font-size:.62rem;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--blue);
+    border:1px solid currentColor;border-radius:99px;
+    padding:.24rem .6rem;display:inline-block;vertical-align:middle;
+    margin-left:.55rem;transform:translateY(-3px);
+  }
+  .bubble{
+    background-color:var(--blue);
+    background-image:radial-gradient(rgba(244,249,255,.25) 3px, transparent 3.6px), linear-gradient(160deg, #2E6FC4, var(--blue) 55%, var(--blue-deep));
+    background-size:30px 30px, 100% 100%;
+    background-position:8px 12px, center;
+    color:#F4F9FF;
+    border-radius:18px;padding:2rem 1.8rem;
+    display:flex;flex-direction:column;justify-content:flex-end;min-height:100%;
+  }
+  .bubble h3{font-family:var(--display);font-style:italic;font-weight:600;font-size:2.1rem;line-height:1.05;margin-bottom:.6rem}
+  .bubble p{color:rgba(244,249,255,.96);font-size:.97rem}
+
+  /* ---------- kontakt ---------- */
+  #kontakt{background:var(--cream)}
+  .kont-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(2rem, 5vw, 4rem);align-items:start}
+  .adres{font-size:1.08rem;margin:.4rem 0 1.2rem}
+  .tel-big{
+    display:inline-block;font-family:var(--display);font-weight:600;
+    font-size:clamp(1.7rem, 3.4vw, 2.5rem);color:var(--red);
+    text-decoration:none;margin-bottom:1.6rem;letter-spacing:.01em;
+  }
+  .tel-big:hover{color:var(--red-bright)}
+  .godziny{max-width:26rem;margin-bottom:1.4rem}
+  .g-row{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .g-row b{font-weight:600}
+  .dowoz{max-width:26rem;font-size:.98rem;margin-bottom:1.2rem}
+  .dowoz b{font-weight:600;color:var(--blue)}
+  .kont-note{font-size:.86rem;color:var(--ink-soft);max-width:26rem}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+  .mapa iframe{display:block;width:100%;height:420px;border:0}
+  .soc-link{display:inline-block;margin-top:1.2rem;margin-right:1.4rem;font-weight:600;color:var(--blue);text-underline-offset:3px}
+
+  /* ---------- stopka ---------- */
+  footer{color:rgba(255,246,220,.92);padding:2.6rem 0}
+  .foot-in{display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem 2rem}
+  .foot-brand{display:flex;align-items:center;gap:.65rem;font-family:var(--display);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#FFF6DC}
+  .foot-brand .qmark{width:34px;height:34px;font-size:1.2rem;border-radius:8px}
+  .foot-meta{font-size:.9rem}
+  .foot-demo{margin-left:auto;font-size:.78rem;color:rgba(255,246,220,.6)}
+
+  /* ---------- pasek "zadzwoń" na telefonie ---------- */
+  .call-bar{display:none}
+
+  /* ---------- animacje wejścia ---------- */
+  [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease, transform .65s ease;transition-delay:var(--d, 0s)}
+  [data-reveal].in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    [data-reveal]{opacity:1;transform:none}
+  }
+
+  /* ---------- responsywność ---------- */
+  @media (max-width: 1020px){
+    .menu-grid{grid-template-columns:1fr 1fr}
+    .slodka-grid{grid-template-columns:1fr 1fr}
+    .bubble{grid-column:span 2;min-height:220px}
+    .pizza-cols{gap:0 2.2rem}
+  }
+  @media (max-width: 900px){
+    body{padding-bottom:calc(92px + env(safe-area-inset-bottom, 0px))}
+    .nav-links{display:none}
+    .hero-grid{grid-template-columns:1fr}
+    .hero-panel{padding-right:clamp(1.7rem, 4.5vw, 3.8rem)}
+    .hero-photo{
+      margin:1.4rem 0 0;
+      aspect-ratio:4/5;
+      overflow:hidden;border-radius:18px;
+      box-shadow:0 22px 44px -16px rgba(0,0,0,.55);
+    }
+    .hero-photo img{
+      position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;border:5px solid var(--paper);border-radius:18px;
+      box-shadow:none;
+    }
+    .badge20{top:12px;right:12px;width:92px;height:92px;border-width:3px}
+    .badge20 b{font-size:2rem}
+    .badge20 span{font-size:.66rem}
+    .ghost-q{font-size:13rem;right:-2rem;bottom:-5.5rem}
+    .rod-grid,.kont-grid{grid-template-columns:1fr}
+    .powody-head,.menu-head,.cennik-head{flex-direction:column;align-items:flex-start;gap:.6rem}
+    .pizza-cols{grid-template-columns:1fr}
+    .cat-grid{grid-template-columns:1fr}
+    .mapa iframe{height:360px}
+    .call-bar{
+      display:block;position:fixed;left:0;right:0;bottom:0;z-index:70;
+      background:rgba(251,242,222,.96);
+      backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+      border-top:1px solid var(--line);
+      padding:.6rem .9rem calc(.75rem + env(safe-area-inset-bottom, 0px));
+    }
+    .call-bar .btn{width:100%;justify-content:center;font-size:1.05rem;padding:1rem}
+  }
+  @media (max-width: 680px){
+    .powody-grid{grid-template-columns:1fr}
+    .menu-grid{grid-template-columns:1fr}
+    .slodka-grid{grid-template-columns:1fr}
+    .bubble{grid-column:auto;min-height:230px}
+    .rod-chips{grid-template-columns:1fr 1fr}
+    .mapa iframe{height:320px}
+    .size-head, .p-row{grid-template-columns:1fr repeat(3, 2.9rem);gap:.5rem}
+  }
+  @media (max-width: 480px){
+    .t-num{display:none}
+    .t-txt{display:inline}
+    .rod-chips{grid-template-columns:1fr}
+  }
+  @media (max-width: 420px){
+    .wrap{width:calc(100% - 1.8rem)}
+    .brand b{font-size:1rem}
+    .hero h1{font-size:2.1rem}
+    h2{font-size:1.75rem}
+    .hero-panel{padding:1.5rem 1.4rem 1.7rem}
+    .hero-lead{font-size:1rem}
+    .promo{font-size:.74rem;padding:.5rem .8rem;letter-spacing:.07em}
+    .btn{width:100%;justify-content:center}
+    .nav .btn{width:auto}
+    .size-head, .p-row{grid-template-columns:1fr repeat(3, 2.7rem);gap:.4rem}
+    .p-row .c{font-size:.85rem}
+    .ribbon{font-size:.92rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAWIGACJA ===== -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#">
+      <span class="qmark" aria-hidden="true">Q</span>
+      <b>Pizzeria Quatro</b>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#cennik">Cennik</a></li>
+      <li><a href="#gigant">Pizza Gigant</a></li>
+      <li><a href="#slodka">Słodka strefa</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a class="btn btn-red nav-tel" href="tel:+48486763420"><span aria-hidden="true">☎</span> <span class="t-num">48 676 34 20</span><span class="t-txt">Zadzwoń</span></a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero wood">
+  <div class="wrap hero-grid">
+    <div class="hero-panel">
+      <span class="ghost-q" aria-hidden="true">Q</span>
+      <p class="kicker">Pizzeria · Zwoleń · Od 20 lat</p>
+      <h1>Quatro znaczy <em>cztery</em> — smaków mamy dużo więcej.</h1>
+      <p class="hero-lead">Pizza prosto z pieca w trzech rozmiarach, Gigant 70 cm nawet na cztery sposoby, burgery ze 100% wołowiny, obiady jak u mamy i lody gałkowe. Karmimy Zwoleń od dwóch dekad — przy placu Jana Kochanowskiego 14.</p>
+      <div class="hero-cta">
+        <a class="btn btn-cream" href="tel:+48486763420">Zadzwoń i zamów</a>
+        <a class="btn btn-ghost" href="#cennik">Zobacz menu i ceny</a>
+      </div>
+      <div class="hero-meta">
+        <span class="promo">Dowóz gratis od 45 zł w mieście</span>
+        <span class="hero-plain">Na miejscu · Na wynos</span>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/hero-wnetrze.jpg" width="1275" height="1700" alt="Pizza Zbójnicka z żurawiną na stole w Pizzerii Quatro" fetchpriority="high">
+      <div class="badge20" aria-label="20 lat działalności"><b>20</b><span>lat</span></div>
+    </figure>
+  </div>
+</header>
+
+<!-- ===== CZTERY POWODY ===== -->
+<section class="sec" id="powody">
+  <div class="wrap">
+    <div class="powody-head" data-reveal>
+      <div>
+        <p class="kicker">Quatro = cztery</p>
+        <h2>Cztery powody, żeby wpaść</h2>
+      </div>
+      <p>Nazwa zobowiązuje, więc trzymamy się czwórek — od liczby smaków na pizzy Gigant po powody, dla których warto nas odwiedzić.</p>
+    </div>
+    <div class="powody-grid">
+      <article class="powod" data-reveal>
+        <span class="num" aria-hidden="true">1</span>
+        <h3>Gigant na 4 smaki</h3>
+        <p>Pizza o średnicy 70 centymetrów, dostępna tylko w lokalu — na miejscu zamówisz ją nawet w czterech rodzajach na jednej blasze. Każdy róg inny, nikt nie idzie na kompromis.</p>
+      </article>
+      <article class="powod" data-reveal style="--d:.08s">
+        <span class="num" aria-hidden="true">2</span>
+        <h3>Więcej niż pizzeria</h3>
+        <p>Kraftowe burgery ze 100% wołowiny, makarony, coś po chińsku, zestawy obiadowe i sałatki. Każdy przy stole znajdzie coś dla siebie — nie tylko fan pizzy.</p>
+      </article>
+      <article class="powod" data-reveal style="--d:.16s">
+        <span class="num" aria-hidden="true">3</span>
+        <h3>Słodka strefa</h3>
+        <p>Latem lody gałkowe i sorbety, zimą ciasta z witryny, a do tego bubble tea. Idealne na deser po obiedzie albo przerwę w spacerze po placu.</p>
+      </article>
+      <article class="powod" data-reveal style="--d:.24s">
+        <span class="num" aria-hidden="true">4</span>
+        <h3>Po sąsiedzku od 20 lat</h3>
+        <p>Dwie dekady w samym sercu Zwolenia. Zadzwoń po drodze, a zamówienie będzie czekać na odbiór — albo dowieziemy pod drzwi, w mieście gratis od 45 zł.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU (KARTY) ===== -->
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="menu-head" data-reveal>
+      <div>
+        <p class="kicker">Co dziś zjemy?</p>
+        <h2>Nasza kuchnia</h2>
+      </div>
+      <p>Stuknij w kafelek, a przeniesiemy Cię prosto do cen i pełnej listy w tej kategorii.</p>
+    </div>
+    <div class="menu-grid">
+      <a class="dish" href="#c-pizza" data-reveal>
+        <div class="dish-img"><img src="img/pizza-parmenska.jpg" width="1170" height="1552" loading="lazy" alt="Pizza Parmeńska z szynką parmeńską, rukolą i pomidorkami koktajlowymi"></div>
+        <div class="dish-body">
+          <h3>Pizza — 32 rodzaje</h3>
+          <p>Od margherity za 17 zł po Parmeńską z szynką parmeńską, rukolą i camembertem. Trzy rozmiary, ciasto grube, średnie lub cienkie.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+      <a class="dish" href="#gigant" data-reveal style="--d:.07s">
+        <div class="dish-img"><img src="img/rodzinna-pudelko.jpg" width="1200" height="1600" loading="lazy" alt="Kwadratowa pizza Gigant w pudełku na wynos"></div>
+        <div class="dish-body">
+          <h3>Kolos 55 i Gigant 70</h3>
+          <p>Dwa rozmiary dla naprawdę głodnej ekipy. Gigant w lokalu zamówisz nawet w czterech rodzajach na jednej blasze.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+      <a class="dish" href="#c-burgery" data-reveal style="--d:.14s">
+        <div class="dish-img"><img src="img/burgery.jpg" width="1600" height="1001" loading="lazy" alt="Dwa kraftowe burgery wołowe na desce z warzywami i papryczkami chili"></div>
+        <div class="dish-body">
+          <h3>Burgery kraftowe</h3>
+          <p>100% wołowiny — od klasycznego Wołowego po potrójne „Bycze Trio”. Z karmelizowaną cebulą, rukolą i autorskimi sosami.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+      <a class="dish" href="#c-makarony" data-reveal>
+        <div class="dish-img"><img src="img/makaron.jpg" width="1200" height="1600" loading="lazy" alt="Penne spinaci ze szpinakiem i suszonymi pomidorami pod parmezanem"></div>
+        <div class="dish-body">
+          <h3>Makarony</h3>
+          <p>Penne z łososiem, carbonara, spinaci, zapiekanki makaronowe — kremowe, sycące, od 25 zł.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+      <a class="dish" href="#c-chinsku" data-reveal style="--d:.07s">
+        <div class="dish-img"><img src="img/krewetki.jpg" width="1200" height="1600" loading="lazy" alt="Krewetki z warzywami z woka podane z ryżem i surówką"></div>
+        <div class="dish-body">
+          <h3>Coś po chińsku</h3>
+          <p>Kurczak, wołowina albo krewetki z warzywami i ryżem. Sos wybierasz sam — od ostrego po słodko-kwaśny.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+      <a class="dish" href="#c-obiady" data-reveal style="--d:.14s">
+        <div class="dish-img"><img src="img/obiady-gulasz.jpg" width="1552" height="1600" loading="lazy" alt="Placki ziemniaczane z gulaszem i surówką"></div>
+        <div class="dish-body">
+          <h3>Zestawy obiadowe</h3>
+          <p>Schabowy, placki z gulaszem, shoarma czy filet z grilla — z frytkami lub ziemniaczkami i zestawem surówek.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+      <a class="dish" href="#c-salatki" data-reveal>
+        <div class="dish-img"><img src="img/salatka.jpg" width="1170" height="1552" loading="lazy" alt="Sałatka z szynką parmeńską, camembertem, pomidorkami koktajlowymi i grzankami"></div>
+        <div class="dish-body">
+          <h3>Sałatki</h3>
+          <p>Lekko i kolorowo — od greckiej po sałatkę z szynką parmeńską, camembertem i grzankami.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+      <a class="dish" href="#c-szybko" data-reveal style="--d:.07s">
+        <div class="dish-img"><img src="img/zapiekanka.jpg" width="1170" height="1552" loading="lazy" alt="Zapiekanka na chrupiącej bagietce z serem, boczkiem, ogórkiem kiszonym i ketchupem"></div>
+        <div class="dish-body">
+          <h3>Coś na szybko</h3>
+          <p>Zapiekanki prosto z pieca, kebaby, frytki i hot-dogi — kiedy głód nie może czekać.</p>
+          <span class="dish-go">Zobacz ceny</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CENNIK ===== -->
+<section class="sec" id="cennik">
+  <div class="wrap">
+    <div class="cennik-head" data-reveal>
+      <div>
+        <p class="kicker">Pełna karta</p>
+        <h2>Menu i ceny</h2>
+      </div>
+      <p>Do każdej pizzy sosy pomidorowy i czosnkowy gratis. Ciasto do wyboru: grube, średnie lub cienkie.</p>
+    </div>
+
+    <div class="pizza-tytul" id="c-pizza" data-reveal>
+      <span class="ribbon">Pizza</span>
+      <small>rozmiary: mała 25 cm · duża 30 cm · kolos 55 cm</small>
+    </div>
+    <div class="pizza-cols" data-reveal>
+      <div>
+        <div class="size-head"><span style="text-align:left">1–16</span><span>25</span><span>30</span><span>55</span></div>
+        <div class="p-row"><span><b>Margherita</b><span class="skl">sos pomidorowy, ser</span></span><span class="c">17,00</span><span class="c">28,00</span><span class="c">54,00</span></div>
+        <div class="p-row"><span><b>Funghi</b><span class="skl">sos pomidorowy, pieczarki, ser</span></span><span class="c">17,50</span><span class="c">30,50</span><span class="c">58,00</span></div>
+        <div class="p-row"><span><b>Papaj</b><span class="skl">sos czosnkowy, szpinak, jajko, ser</span></span><span class="c">19,00</span><span class="c">33,00</span><span class="c">63,00</span></div>
+        <div class="p-row"><span><b>Kukuryku</b><span class="skl">sos pomidorowy, cebula, pieczarki, kurczak, kukurydza, ser</span></span><span class="c">19,50</span><span class="c">34,00</span><span class="c">65,00</span></div>
+        <div class="p-row"><span><b>Hawajska</b><span class="skl">sos pomidorowy, szynka, ananas, ser</span></span><span class="c">19,00</span><span class="c">32,50</span><span class="c">62,00</span></div>
+        <div class="p-row"><span><b>Zbójnicka</b><span class="skl">sos pomidorowy, cebula ×2, ser wędzony, boczek, papryczka ostra, żurawina, ser</span></span><span class="c">22,50</span><span class="c">37,50</span><span class="c">71,00</span></div>
+        <div class="p-row star"><span><b>Quatro</b><span class="skl">sos pomidorowy, szynka, pieczarki, salami, papryka, cebula, oliwki, kukurydza, ser</span></span><span class="c">21,50</span><span class="c">38,00</span><span class="c">73,00</span></div>
+        <div class="p-row"><span><b>Wezuwiusz</b><span class="skl">sos pomidorowy, boczek, ostre salami, cebula, pieczarki, parmezan, ser</span></span><span class="c">21,00</span><span class="c">36,00</span><span class="c">69,00</span></div>
+        <div class="p-row"><span><b>Wegetariańska</b><span class="skl">sos pomidorowy, pieczarki, oliwki, papryka, cebula, kukurydza, ser</span></span><span class="c">19,50</span><span class="c">34,50</span><span class="c">66,00</span></div>
+        <div class="p-row"><span><b>Parmeńska</b><span class="skl">sos pomidorowy, szynka parmeńska, rukola, camembert, pomidorki koktajlowe, ser</span></span><span class="c">21,00</span><span class="c">36,50</span><span class="c">72,00</span></div>
+        <div class="p-row"><span><b>Góralska</b><span class="skl">sos pomidorowy, szynka, boczek, ser wędzony, cebula, papryka, ogórek kiszony, ser</span></span><span class="c">20,50</span><span class="c">35,50</span><span class="c">68,00</span></div>
+        <div class="p-row"><span><b>Pogromca</b><span class="skl">sos czosnkowy, ostre salami, cebula, papryka jalapeño, ser</span></span><span class="c">18,50</span><span class="c">32,00</span><span class="c">61,00</span></div>
+        <div class="p-row"><span><b>Rzymska</b><span class="skl">sos pomidorowy, cebula, tuńczyk, salami, ser</span></span><span class="c">19,50</span><span class="c">33,50</span><span class="c">64,00</span></div>
+        <div class="p-row"><span><b>Meksykańska</b><span class="skl">sos pomidorowy, szynka, salami, pieczarki, papryka jalapeño, cebula, ser</span></span><span class="c">20,50</span><span class="c">35,50</span><span class="c">68,00</span></div>
+        <div class="p-row"><span><b>Mięsna</b><span class="skl">sos pomidorowy, szynka, pieczarki, boczek, salami, cebula, papryka, ser</span></span><span class="c">22,50</span><span class="c">38,00</span><span class="c">73,00</span></div>
+        <div class="p-row"><span><b>Domowa</b><span class="skl">sos pomidorowy, szynka, cebula, pieczarki, salami, jajko, ser</span></span><span class="c">20,50</span><span class="c">35,50</span><span class="c">73,00</span></div>
+      </div>
+      <div>
+        <div class="size-head"><span style="text-align:left">17–32</span><span>25</span><span>30</span><span>55</span></div>
+        <div class="p-row"><span><b>Europa</b><span class="skl">sos pomidorowy, szynka, pieczarki, ser</span></span><span class="c">18,50</span><span class="c">32,00</span><span class="c">61,00</span></div>
+        <div class="p-row"><span><b>Familijna</b><span class="skl">sos śmietanowo-majonezowy, cebula, szynka, pieczarki, kurczak, pomidor, ogórek, oliwki, kukurydza, ser</span></span><span class="c">21,00</span><span class="c">37,00</span><span class="c">71,00</span></div>
+        <div class="p-row"><span><b>Wiejska</b><span class="skl">sos śmietanowo-musztardowy, kiełbasa wiejska, pomidor, cebula ×2, czosnek, ser</span></span><span class="c">20,00</span><span class="c">34,50</span><span class="c">66,00</span></div>
+        <div class="p-row"><span><b>Biesiada serowa</b><span class="skl">sos pomidorowy, cztery rodzaje sera</span></span><span class="c">20,50</span><span class="c">36,00</span><span class="c">67,00</span></div>
+        <div class="p-row"><span><b>Farmerska</b><span class="skl">sos śmietanowy z bazylią, boczek, cebula, jajko, ser</span></span><span class="c">19,00</span><span class="c">33,00</span><span class="c">63,00</span></div>
+        <div class="p-row"><span><b>Kowbojska</b><span class="skl">sos pomidorowy, kabanos, cebula, papryka jalapeño, ser</span></span><span class="c">19,50</span><span class="c">34,00</span><span class="c">65,00</span></div>
+        <div class="p-row"><span><b>Z kurkami</b><span class="skl">sos śmietanowo-majonezowy, szynka, kurki, ser, cebula</span></span><span class="c">21,50</span><span class="c">38,00</span><span class="c">74,00</span></div>
+        <div class="p-row"><span><b>Bolońska</b><span class="skl">sos boloński z wieprzowiną i wołowiną, ser</span></span><span class="c">19,50</span><span class="c">34,00</span><span class="c">65,00</span></div>
+        <div class="p-row"><span><b>Grecka</b><span class="skl">sos czosnkowy, tzatzyki, gyros, ser</span></span><span class="c">20,50</span><span class="c">35,00</span><span class="c">67,00</span></div>
+        <div class="p-row"><span><b>Neptun</b><span class="skl">sos pomidorowy, czosnek, krewetki, ser</span></span><span class="c">20,50</span><span class="c">37,00</span><span class="c">71,00</span></div>
+        <div class="p-row"><span><b>Asterix</b><span class="skl">sos pomidorowy, pomidor, cebula, salami, ser</span></span><span class="c">19,50</span><span class="c">32,50</span><span class="c">62,00</span></div>
+        <div class="p-row"><span><b>Sielska</b><span class="skl">sos pomidorowy, cebula, papryka, wołowina, wieprzowina, oliwki, ser</span></span><span class="c">20,50</span><span class="c">33,50</span><span class="c">66,00</span></div>
+        <div class="p-row"><span><b>Wiosenna</b><span class="skl">sos pomidorowy, kurczak, ser feta, kukurydza, papryka, ser</span></span><span class="c">19,00</span><span class="c">33,00</span><span class="c">63,00</span></div>
+        <div class="p-row"><span><b>Klasyczna</b><span class="skl">sos pomidorowy, szynka, ser</span></span><span class="c">17,50</span><span class="c">31,00</span><span class="c">58,50</span></div>
+        <div class="p-row"><span><b>Diablo</b><span class="skl">sos piri-piri, kabanos ostry, salami ostre, jalapeño ×2, ser</span></span><span class="c">20,00</span><span class="c">36,50</span><span class="c">68,50</span></div>
+        <div class="p-row"><span><b>Rukola</b><span class="skl">sos pomidorowy, szynka, rukola, oliwki czarne, ser, papryka jalapeño</span></span><span class="c">20,50</span><span class="c">37,50</span><span class="c">70,00</span></div>
+      </div>
+    </div>
+    <p class="dodatki-note" data-reveal><b>Dodatki</b> — mięsne i ser (szynka, salami, kiełbasa, kurczak, kabanos, boczek, tuńczyk, ser): 3,00 / 4,50 / 6,00 zł · warzywne (pieczarki, papryka, cebula, ogórek, oliwki, kukurydza, szpinak, brokuły, pomidor, czosnek, jajko, ananas, rukola, pomidory suszone i inne): 1,50 / 2,50 / 4,00 zł — odpowiednio mała / duża / kolos. <b>Pizza Gigant 70 cm</b> — szczegóły poniżej.</p>
+
+    <div class="cat-grid">
+      <div class="cat" id="c-burgery" data-reveal>
+        <span class="ribbon">Burgery kraftowe</span>
+        <p class="cat-note">100% wołowiny</p>
+        <div class="c-row"><span><b>Burger wołowy</b><span class="skl">wołowina, sałata, cebula karmelizowana, ogórek, sosy, pomidor, rukola</span></span><span class="c">35,00</span></div>
+        <div class="c-row"><span><b>Burger Toreador</b><span class="skl">wołowina, sałata, ogórek, cebula karmelizowana, sosy, papryka jalapeño, pomidor, rukola</span></span><span class="c">36,00</span></div>
+        <div class="c-row"><span><b>Cheesburger</b><span class="skl">wołowina, ser, sałata, cebula karmelizowana, ogórek, sosy, pomidor, rukola</span></span><span class="c">36,00</span></div>
+        <div class="c-row"><span><b>Burger Texas</b><span class="skl">wołowina, sałata, ser, cebula karmelizowana, boczek, ogórek, sosy, pomidor, rukola</span></span><span class="c">37,50</span></div>
+        <div class="c-row"><span><b>Burger „Bycze Trio”</b><span class="skl">wołowina ×3, sałata, papryka, pomidor, sosy, rukola, ser wędzony</span></span><span class="c">42,00</span></div>
+      </div>
+
+      <div class="cat" id="c-obiady" data-reveal style="--d:.06s">
+        <span class="ribbon">Zestawy obiadowe</span>
+        <div class="c-row"><span><b>Kotlet schabowy</b><span class="skl">frytki lub ziemniaczki opiekane, zestaw surówek</span></span><span class="c">30,00</span></div>
+        <div class="c-row"><span><b>Kotlet schabowy z serem i pieczarkami</b></span><span class="c">33,00</span></div>
+        <div class="c-row"><span><b>Kotlet drobiowy</b></span><span class="c">30,00</span></div>
+        <div class="c-row"><span><b>Kotlet drobiowy z serem i pieczarkami</b></span><span class="c">33,00</span></div>
+        <div class="c-row"><span><b>Kotlet po wiedeńsku</b><span class="skl">szynka parmeńska, jajko, frytki lub ziemniaki opiekane, surówki</span></span><span class="c">33,00</span></div>
+        <div class="c-row"><span><b>Placki ziemniaczane z gulaszem</b><span class="skl">zestaw surówek lub ogórek konserwowy</span></span><span class="c">35,00</span></div>
+        <div class="c-row"><span><b>Shoarma drobiowa</b></span><span class="c">30,00</span></div>
+        <div class="c-row"><span><b>Shoarma wołowo-barania</b></span><span class="c">33,00</span></div>
+        <div class="c-row"><span><b>Filet drobiowy grillowany</b><span class="skl">ryż lub frytki, zestaw surówek</span></span><span class="c">30,00</span></div>
+        <div class="c-row"><span><b>Nagetsy</b><span class="skl">5 szt., frytki, ketchup lub sos, surówka</span></span><span class="c">25,00</span></div>
+      </div>
+
+      <div class="cat" id="c-chinsku" data-reveal>
+        <span class="ribbon ribbon-y">Coś po chińsku</span>
+        <p class="cat-note">sos do wyboru: ostry, łagodny, czosnkowy, syczuański, pięć smaków, słodko-kwaśny</p>
+        <div class="c-row"><span><b>Kurczak</b><span class="skl">kurczak z warzywami, ryż, surówka</span></span><span class="c">30,00</span></div>
+        <div class="c-row"><span><b>Wołowina</b><span class="skl">wołowina z warzywami, ryż, surówka</span></span><span class="c">32,00</span></div>
+        <div class="c-row"><span><b>Krewetki</b><span class="skl">krewetki z warzywami, ryż, surówka</span></span><span class="c">39,00</span></div>
+        <div class="c-row"><span><b>Warzywa</b><span class="skl">warzywa, ryż</span></span><span class="c">23,00</span></div>
+        <div class="c-row"><span><b>Sajgonki</b><span class="skl">6 sztuk</span></span><span class="c">21,00</span></div>
+      </div>
+
+      <div class="cat" id="c-makarony" data-reveal style="--d:.06s">
+        <span class="ribbon">Makarony</span>
+        <div class="c-row"><span><b>Penne z łososiem</b><span class="skl">penne, cukinia, łosoś, suszone pomidory, groszek zielony, sos śmietanowy</span></span><span class="c">30,00</span></div>
+        <div class="c-row"><span><b>Penne carbonara</b><span class="skl">penne, szynka, boczek, sos śmietanowy</span></span><span class="c">25,00</span></div>
+        <div class="c-row"><span><b>Penne spinaci</b><span class="skl">penne, szpinak, czosnek, sos śmietanowy</span></span><span class="c">25,00</span></div>
+        <div class="c-row"><span><b>Penne eprostiutto</b><span class="skl">penne, szynka, pieczarki, sos pomidorowy</span></span><span class="c">27,00</span></div>
+        <div class="c-row"><span><b>Spaghetti</b></span><span class="c">27,00</span></div>
+        <div class="c-row"><span><b>Zapiekanka makaronowa z kurczakiem</b></span><span class="c">31,00</span></div>
+        <div class="c-row"><span><b>Zapiekanka ze szpinakiem</b></span><span class="c">28,00</span></div>
+      </div>
+
+      <div class="cat" id="c-zapiekanki" data-reveal>
+        <span class="ribbon">Zapiekanki</span>
+        <div class="c-row"><span><b>Margherita</b><span class="skl">sos pomidorowy, ser, ketchup</span></span><span class="c">18,00</span></div>
+        <div class="c-row"><span><b>Tradycyjna</b><span class="skl">pieczarki, ser, ketchup</span></span><span class="c">20,00</span></div>
+        <div class="c-row"><span><b>Z kurczakiem</b><span class="skl">pieczarki, kurczak, sos tysiąca wysp, ser</span></span><span class="c">22,00</span></div>
+        <div class="c-row"><span><b>Z szynką lub salami</b><span class="skl">pieczarki, szynka lub salami, ser, ketchup</span></span><span class="c">21,00</span></div>
+        <div class="c-row"><span><b>Wiejska</b><span class="skl">pieczarki, kiełbasa wiejska, cebula karmelizowana, ser, ketchup</span></span><span class="c">23,00</span></div>
+        <div class="c-row"><span><b>Mięsna</b><span class="skl">pieczarki, szynka, salami, ser, boczek, ketchup</span></span><span class="c">25,00</span></div>
+        <div class="c-row"><span><b>Z kurkami</b><span class="skl">kurki, ser, szczypiorek, ketchup</span></span><span class="c">26,00</span></div>
+        <div class="c-row"><span><b>Z rukolą</b><span class="skl">rukola, pieczarki, pomidor suszony, ser, sos bazyliowy</span></span><span class="c">22,00</span></div>
+        <div class="c-row"><span><b>Góralska</b><span class="skl">pieczarki, ogórek kiszony, ser wędzony, boczek, ser, ketchup</span></span><span class="c">23,00</span></div>
+        <div class="c-row"><span><b>Parmeńska</b><span class="skl">sos pomidorowy, szynka parmeńska, rukola, pomidorki koktajlowe, ser</span></span><span class="c">26,00</span></div>
+        <div class="c-row"><span><b>Diablo</b><span class="skl">pieczarki, ostre salami, papryczka jalapeño, ser, sos piri-piri</span></span><span class="c">23,00</span></div>
+      </div>
+
+      <div class="cat" id="c-salatki" data-reveal style="--d:.06s">
+        <span class="ribbon">Sałatki</span>
+        <div class="c-row"><span><b>Z kurczakiem</b><span class="skl">kurczak, papryka, sałata czerwona, ogórek, pomidor, oliwki czarne, grzanki, sałata lodowa, sos bazyliowy</span></span><span class="c">25,00</span></div>
+        <div class="c-row"><span><b>Grecka</b><span class="skl">sałata lodowa, pomidor, ser typu feta, papryka, oliwki czarne, sos winegret, grzanki</span></span><span class="c">23,00</span></div>
+        <div class="c-row"><span><b>Makaronowa</b><span class="skl">makaron, kurczak, pomidory suszone, rukola, oliwki czarne, słonecznik, sos musztardowo-miodowy</span></span><span class="c">23,00</span></div>
+        <div class="c-row"><span><b>Z szynką parmeńską</b><span class="skl">sałata lodowa, suszone pomidory, szynka parmeńska, cebula, rukola, pomidorki koktajlowe, grzanki, sos winegret, camembert</span></span><span class="c">30,00</span></div>
+        <span class="ribbon" id="c-szybko" style="margin-top:1.6rem;margin-bottom:.9rem">Coś na szybko</span>
+        <div class="c-row"><span><b>Frytki</b></span><span class="c">9,00</span></div>
+        <div class="c-row"><span><b>Hot-dog</b></span><span class="c">13,00</span></div>
+        <div class="c-row"><span><b>Cheeseburger</b></span><span class="c">18,50</span></div>
+        <div class="c-row"><span><b>Bigburger</b></span><span class="c">22,00</span></div>
+        <div class="c-row"><span><b>Burger drobiowy</b></span><span class="c">18,00</span></div>
+        <div class="c-row"><span><b>Kebab drobiowy</b><span class="skl">bułka / tortilla</span></span><span class="c">19,00</span></div>
+        <div class="c-row"><span><b>Kebab wołowo-barani</b><span class="skl">bułka / tortilla</span></span><span class="c">22,00</span></div>
+        <div class="c-row"><span><b>Kebab mieszany</b><span class="skl">bułka / tortilla</span></span><span class="c">21,00</span></div>
+        <div class="c-row"><span><b>Kebab drobiowy MEGA</b><span class="skl">tortilla</span></span><span class="c">26,00</span></div>
+        <div class="c-row"><span><b>Kebab wołowo-barani MEGA</b><span class="skl">tortilla</span></span><span class="c">29,00</span></div>
+        <div class="c-row"><span><b>Box wołowo-barani</b></span><span class="c">32,00</span></div>
+        <div class="c-row"><span><b>Box drobiowy</b></span><span class="c">29,00</span></div>
+        <div class="c-row"><span><b>Tortilla zapiekana</b></span><span class="c">19,50</span></div>
+      </div>
+    </div>
+
+    <p class="cennik-note" data-reveal>Ceny mogą ulec zmianie. Do zamówień na wynos doliczany jest koszt opakowania. Czas realizacji zależy od ilości zamówień. Płatność kartą — w lokalu i u kierowcy.</p>
+  </div>
+</section>
+
+<!-- ===== PIZZA GIGANT ===== -->
+<section class="sec wood" id="gigant">
+  <div class="wrap rod-grid">
+    <figure class="rod-photo" data-reveal>
+      <img src="img/rodzinna-sosy.jpg" width="1275" height="1700" loading="lazy" alt="Wielka kwadratowa pizza Gigant z czterema smakami i kompletem sosów">
+    </figure>
+    <div class="rod-copy" data-reveal style="--d:.1s">
+      <p class="kicker">Nasza specjalność</p>
+      <h2>Pizza Gigant — 70 centymetrów na cztery apetyty</h2>
+      <p class="lead">Największa blacha w karcie, krojona w poręczne kawałki. W lokalu zamówisz ją nawet w czterech rodzajach na jednej pizzy — każdy róg inny, więc nikt nie musi iść na kompromis. Do tego sosy pomidorowy i czosnkowy gratis.</p>
+      <div class="rod-chips">
+        <span class="chip">70 cm średnicy</span>
+        <span class="chip">4 rodzaje w 1</span>
+        <span class="chip">Sosy gratis</span>
+        <span class="chip">Dostępna w lokalu</span>
+      </div>
+      <a class="btn btn-red" href="tel:+48486763420">Zamów Giganta: 48 676 34 20</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SŁODKA STREFA ===== -->
+<section class="sec" id="slodka">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="kicker">Na deser</p>
+      <h2>Słodka strefa</h2>
+      <p style="color:var(--ink-soft);max-width:32rem">Bo po pizzy zawsze zostaje jeszcze trochę miejsca. Latem przed lokal ściąga witryna z lodami, zimą — ciasta do kawy.</p>
+    </div>
+    <div class="slodka-grid">
+      <article class="dish" data-reveal>
+        <div class="dish-img"><img src="img/lody.jpg" width="1200" height="1600" loading="lazy" alt="Cztery gałki lodów w zielonym rożku"></div>
+        <div class="dish-body">
+          <h3>Lody gałkowe<span class="sez">sezon letni</span></h3>
+          <p>Kremowe lody na prawdziwym mleku i śmietanie oraz sorbety, w których ponad połowę stanowią owoce.</p>
+        </div>
+      </article>
+      <article class="dish" data-reveal style="--d:.07s">
+        <div class="dish-img"><img src="img/witryna-ciast.jpg" width="1200" height="1600" loading="lazy" alt="Witryna chłodnicza z kawałkami ciast i bezą"></div>
+        <div class="dish-body">
+          <h3>Ciasta z witryny<span class="sez">sezon zimowy</span></h3>
+          <p>Kawałek ciasta do kawy albo na wynos — witryna zmienia się na bieżąco, więc zawsze jest coś nowego.</p>
+        </div>
+      </article>
+      <div class="bubble" data-reveal style="--d:.14s">
+        <h3>Bubble tea</h3>
+        <p>Kolorowe, owocowe herbatki z perełkami tapioki. Orzeźwienie, które dzieciaki znają z TikToka — a u nas jest na wyciągnięcie ręki.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<section class="sec" id="kontakt">
+  <div class="wrap kont-grid">
+    <div data-reveal>
+      <p class="kicker">Kontakt</p>
+      <h2>Wpadnij albo zadzwoń</h2>
+      <p class="adres"><b>Pizzeria Quatro</b><br>Plac Jana Kochanowskiego 14<br>26-700 Zwoleń</p>
+      <a class="tel-big" href="tel:+48486763420">48 676 34 20</a>
+      <div class="godziny" aria-label="Godziny otwarcia">
+        <div class="g-row"><b>Poniedziałek – czwartek</b><span>10:00 – 22:00</span></div>
+        <div class="g-row"><b>Piątek</b><span>10:00 – 23:30</span></div>
+        <div class="g-row"><b>Sobota</b><span>11:00 – 23:30</span></div>
+        <div class="g-row"><b>Niedziela</b><span>12:00 – 23:00</span></div>
+      </div>
+      <p class="dowoz"><b>Dowóz:</b> na terenie miasta — gratis przy zamówieniu powyżej 45 zł.<br><b>Płatność:</b> gotówka lub karta, w lokalu i u kierowcy.</p>
+      <p class="kont-note">W święta i dni szczególne godziny mogą się różnić — w razie wątpliwości najlepiej po prostu zadzwoń.</p>
+      <a class="soc-link" href="https://www.facebook.com/p/Pizzeria-Quatro-61556299533342/" target="_blank" rel="noopener">Facebook →</a>
+      <a class="soc-link" href="https://www.instagram.com/pizzeriaquatro/" target="_blank" rel="noopener">Instagram →</a>
+    </div>
+    <div class="mapa" data-reveal style="--d:.1s">
+      <iframe src="https://www.google.com/maps?q=Pizzeria%20Quatro%2C%20Plac%20Jana%20Kochanowskiego%2014%2C%2026-700%20Zwole%C5%84&output=embed" title="Mapa dojazdu do Pizzerii Quatro w Zwoleniu" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STOPKA ===== -->
+<footer class="wood">
+  <div class="wrap foot-in">
+    <span class="foot-brand"><span class="qmark" aria-hidden="true">Q</span> Pizzeria Quatro</span>
+    <span class="foot-meta">Plac Jana Kochanowskiego 14, 26-700 Zwoleń &nbsp;·&nbsp; tel. <a href="tel:+48486763420" style="color:inherit">48 676 34 20</a></span>
+    <span class="foot-demo">Wersja demonstracyjna strony · projekt: pieshki</span>
+  </div>
+</footer>
+
+<!-- ===== PASEK POŁĄCZENIA (TYLKO TELEFON) ===== -->
+<div class="call-bar">
+  <a class="btn btn-red" href="tel:+48486763420">☎ Zadzwoń i zamów &nbsp;·&nbsp; 48 676 34 20</a>
+</div>
+
+<script>
+  // cień nawigacji po przewinięciu
+  var nav = document.getElementById('nav');
+  addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', scrollY > 12);
+  }, {passive:true});
+
+  // animacje wejścia z poszanowaniem prefers-reduced-motion
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+</script>
+</body>
+</html>
